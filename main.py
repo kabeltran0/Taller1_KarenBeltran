@@ -12,9 +12,10 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
-
+    path = input('Ingrese la ruta de la imagen:')
+    name = input('Ingrese el nombre de la imagen:')
     #ruta y nombre de la imagen
-    img=colorimage('C:/Users/karen/Documents/Ingenieriaelectronica/NovenoSemestre/Procesamientodeimagenes/Talleres','lena.png')
+    img=colorimage(path,name)
     #implementación de métodos
     img.displayProperties()
     img.makeGray()
