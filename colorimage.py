@@ -49,7 +49,7 @@ class colorimage:
         self.hsv = cv2.cvtColor(self.image, cv2.COLOR_BGR2HSV)  #la función cv2.cvtColor permite cambiar el espacio de color, en este caso de BGR a HSV
         self.hsv[:, :, 1] = 255                                 #se pone el valor de Saturation en 255
         self.hsv[:, :, 2] = 255                                 #se pone el valor de Value en 255
-        self.hue = cv2.cvtColor(self.image, cv2.COLOR_HSV2BGR)  #la función cv2.cvtColor permite cambiar el espacio de color, en este caso de HSV a BGR
+        self.hue = cv2.cvtColor(self.hsv, cv2.COLOR_HSV2BGR)  #la función cv2.cvtColor permite cambiar el espacio de color, en este caso de HSV a BGR
         cv2.imshow('hue_image', self.hue)                       #muestra la imagen resaltando tonos
         cv2.waitKey(0)                                          #mantiene la imagen abierta
 
